@@ -1,0 +1,36 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+<!-- {% load static %} без этого не загружается страница-->
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<link type="text/css" rel="stylesheet" href="{% static 'cart/css/cart.css' %}">
+
+
+    <h1>Ваша корзина</h1>
+
+    <div class="product-list">
+        {% for item in cart_items %}
+        <div class="product-item">
+            <a href="{% url 'product_detail' item.product.slug %}">
+            <img class="belt-img" src="{{ item.product.image.url }}"/>
+            </a>
+            <p>{{ item.product.name }}</p>
+<!--            <p>Размер: {{ item.product.size }}</p>-->
+            <p>Размер: {{ item.size_product }}</p>
+            <p>Количество: {{ item.quantity }}</p>
+            <p>Цена: {{ item.product.price }}</p>
+            <a href="{% url 'cart:remove_from_cart' item.id %}"><button type="button" class="btn btn-light">Удалить</button></a>
+        </div>
+        {% empty %}
+        <p>Ваша корзина пуста</p>
+        {% endfor %}
+    </div>
+
+    <p>Итоговая цена: {{ total_price }}</p>
+
+<!--    <a href="{% url 'catalog' %}">Продолжить покупки</a>-->
+    <a href="{% url 'catalog' %}"><button type="button" class="btn btn-light">Продолжить покупки</button></a>
+<!--    <a href="{% url 'cart:order' %}">Оформить заказ</a>-->
+    <a href="{% url 'cart:order' %}"><button type="button" class="btn btn-light">Оформить заказ</button></a>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+<!-- {% load static %} без этого не загружается страница-->
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<link type="text/css" rel="stylesheet" href="{% static 'catalog/css/css_catalog.css' %}">
+
+<div class="category-buttons">
+    <a href="{% url 'mens_belts' %}"><button type="button" class="btn btn-light">Мужские ремни </button></a>
+    <a href="{% url 'womens_belts' %}"><button type="button" class="btn btn-light">Женские ремни </button></a>
+</div>
+<div class="all-products">
+    <ul class="product-belt">
+        {% for i in list_belts %}
+        <li>
+        <img class="belt-img" src="{{ i.image.url }}"/>
+        <a href="{% url 'product_detail' i.slug %}"><h5 class="name">{{ i.name }}</h5></a>
+        <h6 class="price">{{ i.price }}₽</h6>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

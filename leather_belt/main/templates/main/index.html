@@ -1,0 +1,11 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+<!-- {% load static %} без этого не загружается страница-->
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="container1">
+    <h1 class="text-left">ИЗДЕЛИЯ ИЗ КОЖИ<br>ручной работы<br><a href="{% url 'catalog' %}"><button type="button" class="btn btn-light">Перейти в каталог</button></a></h1>
+    <img class="intro" src="{% static 'main/img/bacground-intro-leto.jpg' %}" alt="intro">
+</div>
+{% endblock %}

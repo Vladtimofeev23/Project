@@ -1,0 +1,14 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+<!-- {% load static %} без этого не загружается страница-->
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<link type="text/css" rel="stylesheet" href="{% static 'cart/css/order_confirmation.css' %}">
+
+<div>
+    <h1>Спасибо за заказ!</h1>
+    <h3>Номер заказа: {{ order }} </h3>
+</div>
+
+{% endblock %}

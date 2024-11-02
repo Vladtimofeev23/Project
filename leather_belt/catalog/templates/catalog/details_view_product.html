@@ -1,0 +1,32 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+<!-- {% load static %} без этого не загружается страница-->
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<link type="text/css" rel="stylesheet" href="{% static 'catalog/css/css_details_view_product.css' %}">
+
+<div class="content">
+    <img class="belt-img" src="{{ product.image.url }}"/>
+    <div class="text">
+    <h1>{{ product.name }}</h1><br>
+    <h5>Цвет: {{ product.color }}</h5><br>
+    <h5>Выберите размер:</h5>
+        <form action="{% url 'cart:add_to_cart' product.id %}" method="post">
+        {% csrf_token %}
+        {% for key, value in product.size.items %}
+        <input id="npt" type="radio" name="selected_size" value="{{ value }}">
+        <p>{{ value }}</p>
+<!--        <input type="radio" class="btn-check" name="selected_size" value="{{ value }}" id="option1" checked>-->
+<!--        <label class="btn btn-secondary" for="option1">{{ value }}</label>-->
+        {% endfor %}
+        <h3>Характеристики</h3>
+        <span>{{ product.characteristics }}</span><br>
+        <h3>Описание</h3>
+        <span>{{ product.description }}</span><br>
+        <h2>{{ product.price }}₽</h2><br>
+        <button type="submit" class="btn btn-light">В корзину</button>
+        </form><br>
+    </div>
+</div>
+{% endblock %}

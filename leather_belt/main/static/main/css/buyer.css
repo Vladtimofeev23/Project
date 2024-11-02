@@ -1,0 +1,19 @@
+.main {
+    /*background: #FFA07A;*/
+    width: 1411.5px;
+    height: auto;
+    border-radius: 10px;
+    padding-top: 100px;
+
+}
+
+hr {
+    height: 3px;
+    background-color: rgba(0, 0, 0, .1);
+    border: 0;
+    margin: 35px 0;
+}
+
+div {
+    text-align: center;
+}

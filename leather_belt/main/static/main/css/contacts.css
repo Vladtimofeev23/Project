@@ -1,0 +1,17 @@
+.main {
+    /*background: #FFA07A;*/
+    width: 1411.5px;
+    height: auto;
+    border-radius: 10px;
+    padding-top: 100px;
+
+}
+
+.cont, .address {
+    align: left;
+    text-align: center;
+}
+
+.map {
+    float: right;
+}

@@ -1,0 +1,42 @@
+.main {
+    /*background: #FFA07A;*/
+    width: 1411.5px;
+    height: auto;
+    border-radius: 10px;
+    padding-top: 100px;
+
+}
+
+.category-buttons {
+    width: 1411.5px;
+    /*background: blue;*/
+    display: inline-block;
+
+}
+
+.product-belt {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 15px;
+    border-radius: 10px;
+
+}
+
+.belt-img {
+    width: 250px;
+    height: 250px;
+
+}
+
+h5 {
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+

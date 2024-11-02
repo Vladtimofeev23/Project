@@ -1,0 +1,51 @@
+.main {
+    /*background: #FFA07A;*/
+    width: 1411.5px;
+    height: auto;
+    border-radius: 10px;
+    padding-top: 100px;
+
+}
+
+hr {
+    height: 3px;
+    background-color: rgba(0, 0, 0, .1);
+    border: 0;
+    margin: 35px 0;
+}
+
+.img1 {
+    width: 400px;
+    height: 400px;
+    margin: 30px 0;
+
+}
+
+.img2 {
+    width: 800px;
+    height: 400px;
+    margin: 30px 0;
+
+}
+
+.about1, .about2-2, .about2-3, .about2-0 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.about2-1 {
+    height: 400px;
+}
+
+.img1-1 {
+    width: 400px;
+    height: 400px;
+    float: left;
+    margin: 0 30px;
+}
+
+.about2-1-text {
+    height: 400px;
+    padding-top: 75px;
+
+}

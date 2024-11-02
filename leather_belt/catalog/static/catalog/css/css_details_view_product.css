@@ -1,0 +1,35 @@
+.belt-img {
+    width: 650px;
+    height: 650px;
+    /*background: #c75a9b;*/
+    border-radius: 10px;
+
+}
+
+.main {
+    /*background: #FFA07A;*/
+    width: 1411.5px;
+    height: auto;
+    border-radius: 10px;
+    padding-top: 100px;
+
+}
+
+.content {
+    /*background: #7af078;*/
+    display:flex;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-radius: 10px;
+
+}
+
+.text {
+    margin-left: 30px;
+    font-family: Arial, serif;
+}
+
+/*#npt {
+    width: 50px;
+    height: 50px;
+}*/

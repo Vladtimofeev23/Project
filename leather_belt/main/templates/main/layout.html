@@ -1,0 +1,65 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <script src="https://kit.fontawesome.com/468e880f8e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="cap1">
+    <a href="{% url 'home' %}" class="logo"><button class="button-home" type="button">Leather belt</button></a>
+<!--    <span class="logo">Leather belt</span>-->
+</div>
+<div class="cap2">
+    <nav>
+        <ul>
+            <li><a href="{% url 'catalog' %}">Ремни</a></li>
+            <li><a href="{% url 'buyer' %}">Покупателю</a></li>
+            <li><a href="{% url 'about' %}">О нас</a></li>
+            <li><a href="{% url 'contacts' %}">Контакты</a></li>
+        </ul>
+    </nav>
+</div><!--
+--><div class="cap3">
+    <form action="{% url 'search' %}" method="get">
+        <p><label for = '1'></label><input type="text" name="q" id="1"><button class="button-home" type="submit"> <i class="fa-solid fa-magnifying-glass"></i></button></p>
+    </form>
+<!--    <button class="search"><i class="fa-solid fa-magnifying-glass"></i></button>-->
+</div><!--
+--><div class="cap4">
+    <a href="{% url 'users_login:personal_area' %}"><button class="user"><i class="fa-solid fa-user"></i></button></a>
+</div><!--
+--><div class="cap5">
+    <a href="{% url 'cart:view_cart' %}"><button type="button" class="btn btn-light">Корзина <i class="fa-solid fa-basket-shopping"></i></button></a>
+</div>
+    <div class="main">
+        {% block content %}
+        {% endblock %}
+    </div>
+<footer class="tail">
+    <div class="payment">
+        <span>Способы оплаты</span>
+        <p><button class="mastercard"><i class="fa-brands fa-cc-mastercard"></i></button>  <button class="visa"><i class="fa-brands fa-cc-visa"></i></button> </p>
+
+    </div>
+    <div class="social">
+        <span>Мы в соц. сетях</span>
+        <p><button class="vk"><i class="fa-brands fa-vk"></i></button>
+           <button class="instagram"><i class="fa-brands fa-square-instagram"></i></button>
+           <button class="telegram"><i class="fa-brands fa-telegram"></i></button>
+           <button class="youtube"><i class="fa-brands fa-youtube"></i></button>
+        </p>
+    </div>
+    <div class="contacts">
+        <span>Связаться с нами</span>
+        <p>8 800 800-08-09<br>звонок бесплатный по России<br>+7 937 937-08-09<br>leatherbelt@yandex.ru</p>
+    </div>
+</footer>
+</body>
+</html>

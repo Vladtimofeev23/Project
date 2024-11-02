@@ -1,0 +1,18 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+<!-- {% load static %} без этого не загружается страница-->
+{% block title %}{{ title }}{% endblock %}
+{%load crispy_forms_tags %}
+
+{% block content %}
+<link type="text/css" rel="stylesheet" href="{% static 'cart/css/order.css' %}">
+
+<form method="post">
+    {% csrf_token %}
+    {{ form|crispy }}<br>
+<!--    <input type="submit" value="Отправить">-->
+    <br><button type="submit" class="btn btn-light">Отправить</button>
+</form>
+
+
+{% endblock %}

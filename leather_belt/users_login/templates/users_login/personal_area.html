@@ -1,0 +1,33 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+<!-- {% load static %} без этого не загружается страница-->
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<link type="text/css" rel="stylesheet" href="{% static 'users_login/css/css_personal_area.css' %}">
+
+<div class="content">
+    <h3>{{ user.first_name }}</h3>
+    <h3>{{ user.last_name }}</h3>
+    <h4>{{ user.email }}</h4>
+    <p>Ваши заказы:</p>
+    <div class="order-list">
+        {% for id in u %}
+            <div class="order-item">
+            <p>Номер заказа: {{ id }}</p>
+            {% for i in myorders %}
+            {% if id == i.order_id %}
+<!--            <p>Номер заказа: {{ i.order.id }}</p>-->
+            <p> Статус заказа: {{ i.order.status }}</p>
+            <p><img class="belt-img" src="{{ i.product.image.url }}"/> </p>
+<!--        </div>-->
+        {% endif %}
+        {% empty %}
+        <p>У вас еще нет созданных заказов!</p>
+        {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+    <a href="{% url 'users_login:logout' %}"><button type="button" class="btn btn-light">Выход</button></a>
+</div>
+{% endblock %}

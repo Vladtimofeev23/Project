@@ -1,0 +1,192 @@
+/* Сброс стилей списка */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Стилизация элементов списка */
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/* Стилизация ссылок */
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Стилизация ссылок при наведении */
+nav a:hover {
+  color: #999999;
+}
+
+.logo {
+    font-family: Arial, serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 35px;
+    text-decoration: none;
+    color: #333;
+
+}
+
+.intro {
+    width: 1411.5px;
+    border-radius: 10px;
+}
+
+.text-left {
+    position: absolute;
+    color: black;
+    font-size: 50px;
+    bottom: 240px;
+    left: 240px;
+    line-height: 62.5px;
+    font-weight: 900;
+    font-style: fantasy;
+    letter-spacing: 7.5px;
+    text-align: left;
+}
+
+body {
+    margin: 0;
+}
+
+.cap1 {
+    display: inline-block;
+
+    /*background: red;*/
+    float: left;
+    width: 305px;
+    padding-left: 30px;
+    margin-top: 20px;
+}
+
+.button-home {
+    all: unset;
+}
+
+.cap2 {
+    float: left;
+    display: inline-block;
+
+    /*background: green;*/
+    width: 610px;
+    font-family: Arial, serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.cap3 {
+    float: left;
+    display: inline-block;
+
+    /*background: blue;*/
+    width: 250px;
+    height: 38px;
+
+    font-family: Arial, serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+input {
+    width: 208px;
+    height: 38px;
+    float: left;
+}
+
+.cap4 {
+    float: left;
+    display: inline-block;
+
+    /*background: grey;*/
+    width: 150px;
+    font-family: Arial, serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.cap5 {
+    float: left;
+    display: inline-block;
+    /*background: yellow;*/
+    width: 156px;
+    font-family: Arial, serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: right;
+    padding-right: 30px;
+    margin-top: 30px;
+}
+
+.search {
+     background: none;
+     border: none;
+     padding: 0;
+}
+
+.user {
+     background: none;
+     border: none;
+     padding: 0;
+}
+
+.tail {
+    background-color: #f5f5f5;
+    width: 1411.5px;
+    margin: 30px;
+    border-radius: 10px;
+}
+
+.payment {
+    display: inline-block;
+    float: left;
+    width: 33%;
+    font-size: 35px;
+    padding-left: 30px;
+}
+
+.social {
+    display: inline-block;
+    float: left;
+    width: 33%;
+    font-size: 35px;
+    padding-left: 30px;
+}
+
+.contacts {
+    display: inline-block;
+    width: 33%;
+    font-size: 25px;
+    padding-left: 30px;
+    padding-left: 30px;
+
+}
+
+.mastercard, .visa, .vk, .instagram, .telegram, .youtube {
+     background: none;
+     border: none;
+     padding: 0;
+}
+
+.main {
+    margin-left: 30px;
+    /*background: #FFA07A;*/
+    width: 1411.5px;
+    height: auto;
+    border-radius: 10px;
+    padding-top: 100px;
+}

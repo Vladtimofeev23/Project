@@ -1,0 +1,27 @@
+.belt-img {
+    width: 100px;
+    height: 100px;
+    background: #c75a9b;
+    border-radius: 10px;
+
+}
+
+
+    /* Add CSS styles for flex container and items */
+.order-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next row if necessary */
+    justify-content: space-between; /* Space items evenly along the main axis */
+    list-style: none; /* Remove list styles */
+    padding: 0;
+}
+
+.order-item {
+
+    flex: 1; /* Grow to fill available space evenly */
+     /* Limit item width to avoid overcrowding */
+    margin: 10px; /* Add spacing between items */
+    border: 1px solid #ccc; /* Add a border for visual separation */
+    padding: 10px;
+    text-align: center;
+}
